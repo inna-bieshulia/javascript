@@ -1,15 +1,11 @@
-
-function area1(width, height) {
-    return width * height;
-}
-console.log("Function Declaration:", area1(2, 5));
-
-
-const area2 = function (width, height) {
-    return width * height;
+const handleNum = (num, handleEven, handleOdd) => {
+    num % 2 === 0 ? handleEven() : handleOdd();
 };
-console.log("Function Expression:", area2(5, 10));
+
+const handleEven = () => console.log("Number is even");
 
 
-const area3 = (width, height) => width * height;
-console.log("Arrow Function:", area3(7, 17));
+const handleOdd = () => console.log("Number is odd");
+
+handleNum(10, handleEven, handleOdd);
+handleNum(11, handleEven, handleOdd);  
